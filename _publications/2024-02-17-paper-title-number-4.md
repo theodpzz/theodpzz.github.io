@@ -1,5 +1,5 @@
 ---
-title: "Leveraging edge detection and neural networks for better UAV localization"
+title: "Paper Title Number 2"
 collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
