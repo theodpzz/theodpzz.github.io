@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
 excerpt: "We propose a novel method for geolocalizing Unmanned Aerial Vehicles (UAVs) in environments lacking Global Navigation Satellite Systems (GNSS). We demonstrate that the performance of state-of-the-art methods can be significantly enhanced by preprocessing the images to extract their edges, which exhibit robustness to seasonal and illumination variations."
-img: /images/edge_detec.jpg
+img: /images/edge_detec.png
 date: 2024-07-12
 venue: 'IGARSS'
 paperurl: 'https://arxiv.org/abs/2404.06207'
