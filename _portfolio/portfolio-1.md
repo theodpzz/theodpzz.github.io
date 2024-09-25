@@ -1,6 +1,6 @@
 ---
 title: "Lopes vs Navas"
-excerpt: "Dataviz: season data comparison between 2 goalkeepers.<br/><img src='/images/lopes_vs_navas.png'>"
+excerpt: "Dataviz: season data comparison between 2 goalkeepers.<br/><img src='/images/lopes_vs_navas.jpg'>"
 collection: portfolio
 ---
 
