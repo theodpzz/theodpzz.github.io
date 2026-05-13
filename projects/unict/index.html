@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="UniCT: A Unified Joint Multi-Task Framework for 3D Chest CT Abnormality Analysis.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniCT - Project Page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">UniCT: A Unified Joint Multi-Task Framework for 3D Chest CT Abnormality Analysis</h1>
+          <h1 class="title is-4 publication-title">MICCAI 2026</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Theo Di Piazza</a><sup>1,2</sup></span>
+            <span class="author-block">
+              Carole Lazarus</a><sup>3</sup></span>
+            <span class="author-block">
+              Olivier Nempont</a><sup>3</sup></span>
+            <span class="author-block">
+              Loic Boussel</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSA Lyon,</span>
+            <span class="author-block"><sup>2</sup>Hospices Civil de Lyon</span>
+            <span class="author-block"><sup>3</sup>Philips Clinical Informatics</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Soon</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Soon</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            The increasing number of CT scan examinations has lead to the need of developing automated tools to support radiologists managing their growing workload. 
+            Multi-label abnormality analysis from 3D chest CT scans, including abnormality classification, segmentation and report generation, is therefore a key capability for clinical decision support. 
+            However, such tasks remain highly challenging due to the high-dimensional structure of the data, and the wide variety of abnormalities to detect. 
+            Existing approaches typically address abnormality classification, segmentation, or report generation in isolation, despite their strong semantic and clinical interdependence. 
+            In clinical workflows, radiologists identify abnormalities by simultaneously localizing regions of interest and synthesizing descriptive findings. 
+            In light of this, we propose UniCT, the first end-to-end unified framework that jointly performs multi-label abnormality classification, segmentation, and report generation from 3D chest CT scans. 
+            UniCT explicitly models cross-task interactions through a multi-task fusion mechanism and a segmentation-conditioned feature modulation, enabling shared spatial and semantic reasoning across tasks. 
+            Experimental results on two public datasets demonstrate that joint learning yields consistent mutual gains across tasks, achieving competitive performance and providing an effective inductive bias for unified CT analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-unified">
+          <p>
+            UniCT jointly addresses multi-label abnormality classification, 
+            segmentation and automated report generation in a unified framework. 
+            The input 3D CT scan is processed through a visual encoder
+            to obtain slice-level and global representations of the volume. Task
+            specific latent representations for abnormality classification, segmentation, and
+            report generation are then derived via adapters and refined through a multi-task
+            fusion module to enable information exchanges across tasks. Features
+            are finally passed to independent modules for task-specific predictions.
+          </p>
+          <img src="./static/images/method_overview.png" alt="Main figure" width="95%">
+        </div>
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained on ReXGroundingCT, using 5-fold cross-validation patient-level splits (70/15/15).
+          </p>
+        </div>
+        <!-- Classification. -->
+        <h4 class="title is-4">Abnormality Classification</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            We first evaluate UniCT on the multi-label abnormality classification task. 
+            We report F1-Score, AUROC and mAP performances on the held-out test set, 
+            averaged across the 10 considered abnormalities from <a href="https://huggingface.co/datasets/rajpurkarlab/ReXGroundingCT">ReXGroundingCT</a>.
+            For cross-dataset generalization, models are evaluated on <a href="https://zenodo.org/records/6406114">RAD-ChestCT</a>,
+            where <i>pulmonary nodes</i> and <i>micronodules</i> are combined as <i>nodes</i>.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/quantitate_classification.png" alt="Qualitative results" width="90%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>Internal evaluation:</b> UniCT outperforms both classification-only and the multi-task baselines,
+            suggesting that combining classification with segmentation and report generation supervision enhances the
+            modeling of abnormality patterns.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>External validation:</b> Under distribution shift, UniCT achieves strong generalization, 
+            matching CT-Scroll in F1-Score and AUROC, while additionally providing segmentation masks and radiology reports.
+          </p>
+        </div>
+        <!--/ Classification. -->
+
+        <!-- Multi-Task Ablation. -->
+        <h4 class="title is-4">Multi-Task Ablation</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            UniCT is further evaluated on the abnormality segmentation and automated report generation tasks, 
+            performing a cross-task ablation study to quantify the impact of model components.
+            Evaluation is limited to ReXGroundingCT, as only abnormality binary labels are available from RAD-ChestCT.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/ablation_multi_task.png" alt="Qualitative results" width="85%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>Multi-task learning</b> provides complementary supervision, sharing spatial and semantic reasoning that benefits all tasks.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>The fusion module (1)</b>, enabling interaction between task-specific representations, is crucial to enhance multi-task learning.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>The segmentation modulation (2)</b> operates as a targeted mechanism that enhances dense prediction.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>Classification supervision (3)</b> provides a strong global supervisory signal that facilitates effective learning for other tasks.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>Segmentation supervision (4)</b> encourages spatially-aware feature learning which benefits to other tasks.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>Report generation supervision (5)</b> provides complementary semantic supervision for discriminative and dense tasks.
+        </div>
+        <!--/ Multi-Task Ablation. -->
+
+        <!-- Qualitative. -->
+        <h4 class="title is-4">Qualitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            We show an example of correct predictions (a & b), 
+            and the multi-task fusion attention matrix (c) 
+            averaged across attention heads, test samples and cross-validation folds.
+            Manually drawn reference boxes (in green) are shown to facilitate visualization.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative_examples.png" alt="Qualitative results" width="95%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key observations:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>Example of correct predictions</b> illustrates UniCT's ability to provide discriminative predictions, spatial grounding and clinically coherent textual descriptions.
+          </p>
+          <p style="margin-top: -1em; padding-left: 2em; text-indent: 0em;">
+            <b>The attention matrix</b> reveals structured collaboration between tasks. Classification and report generation exhibit strong bidirectional interactions, while segmentation distributes attention more uniformly across tasks.
+          </p>
+        </div>
+        <!--/ Qualitative. -->
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work of academic research, our experiments are run on public Computed Tomography datasets. 
+            We acknowledge contributors from <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">CT-RATE</a> <b>[1]</b>, 
+            <a href="https://huggingface.co/datasets/rajpurkarlab/ReXGroundingCT">ReXGroundingCT</a> <b>[2]</b> 
+            and <a href="https://zenodo.org/records/6406114">RAD-ChestCT</a> <b>[3]</b> 
+            for releasing the datasets to the research community.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[1]</b> Generalist foundation models from a multimodal dataset for 3D CT.
+            <a href="https://www.nature.com/articles/s41551-025-01599-y">Hamamci et al. 2026</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[2]</b> A 3D Chest CT Dataset for Segmentation of Findings from Free-Text Reports.
+            <a href="https://arxiv.org/abs/2507.22030">Baharoon et al. 2025</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[3]</b> Machine-learning-based multiple abnormality prediction with large-scale chest CT volumes.
+            <a href="https://www.sciencedirect.com/science/article/pii/S1361841520302218">Draelos et al. 2021</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{dipiazza_2026_unict,
+  author    = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier. and Boussel, Loic},
+  title     = {UniCT: A Unified Joint Multi-Task Framework for 3D Chest CT Abnormality Analysis},
+  journal   = {International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
