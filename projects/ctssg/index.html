@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Structured Spectral Graph Representation Learning for Multi-label Abnormality Analysis from 3D CT Scans.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CT-SSG - Project Page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Structured Spectral Graph Representation Learning for Multi-label Abnormality Analysis from 3D CT Scans</h1>
+          <h1 class="title is-4 publication-title">Under review</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Theo Di Piazza</a><sup>1,2</sup></span>
+            <span class="author-block">
+              Carole Lazarus</a><sup>3</sup></span>
+            <span class="author-block">
+              Olivier Nempont</a><sup>3</sup></span>
+            <span class="author-block">
+              Loic Boussel</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSA Lyon,</span>
+            <span class="author-block"><sup>2</sup>Hospices Civil de Lyon</span>
+            <span class="author-block"><sup>3</sup>Philips Clinical Informatics</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Soon</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Soon</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="null"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Soon</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          With the growing volume of CT examinations, there is an increasing demand for automated tools such as organ segmentation, 
+          abnormality detection, and report generation to support radiologists in managing their clinical workload. Multi-label 
+          classification of 3D Chest CT scans remains a critical yet challenging problem due to the complex spatial relationships 
+          inherent in volumetric data and the wide variability of abnormalities. Existing methods based on 3D convolutional neural 
+          networks struggle to capture long-range dependencies, while Vision Transformers often require extensive pre-training on 
+          large-scale, domain-specific datasets to perform competitively. In this work, we propose a 2.5D alternative by introducing 
+          a new graph-based framework that represents 3D CT volumes as structured graphs, where axial slice triplets serve as nodes 
+          processed through spectral graph convolution, enabling the model to reason over inter-slice dependencies while maintaining 
+          complexity compatible with clinical deployment. Our method, trained and evaluated on 3 datasets from independent institutions, 
+          achieves strong cross-dataset generalization, and shows competitive performance compared to state-of-the-art visual encoders. 
+          We further conduct comprehensive ablation studies to evaluate the impact of various aggregation strategies, edge-weighting 
+          schemes, and graph connectivity patterns. Additionally, we demonstrate the broader applicability of our approach through 
+          transfer experiments on radiology report generation and abdominal CT data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/watch?v=00dRw8bX4lM&feature=youtu.be"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            <b>(1)</b> Adjacent axial slices are grouped into triplets, each representing a node in a graph. 
+            <b>(2)</b> Edges between nodes are weighted according to their physical distance along the z-axis. 
+            <b>(3)</b> Node features are enhanced with Triplet Axial Slices positional embeddings, and then 
+            processed by a Spectral Block that incorporates Chebyshev graph convolution for structured spectral modeling. 
+            <b>(4)</b> The resulting node representations are aggregated via mean pooling and passed to a classification head to predict abnormalities.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/method_overview.png" alt="Main figure" width="90%">
+        </div>
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained on <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">CT-RATE</a>, 
+            using 5-fold cross-validation patient-level splits.
+            Evaluation include an internal validation on the held-out CT-RATE test set,
+            as well as cross-dataset evaluations on 
+            <a href="https://zenodo.org/records/6406114">RAD-ChestCT</a> and the private CT-HCL.
+            We benchmark CT-SSG against 2.5D and 3D visual encoders including convolutional,
+            transformer-based and hybrid architectures.
+          </p>
+        </div>
+        <!-- Classification. -->
+        <h4 class="title is-4">Abnormality Classification</h4>
+        <!-- Internal. -->
+        <div class="content has-text-justified">
+          <p>
+            We first evaluate visual encoders on the multi-label abnormality classification task. 
+            Performance is assessed using F1-Score, AUROC, Accuracy and mAP.
+          </p>
+          <b>Internal.</b> Reported metrics are averaged across the 18 classes from CT-RATE.
+          CT-SSG yields the best performances across all metrics (paired t-test across folds, p < 0.01),
+          with a +Δ8% improvement in AUROC over ResNet3D, and +Δ6% over ViT-3D.
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/classification_ctrate.png" alt="Classification - Quantitative results - CT-RATE" width="50%">
+        </div>
+        <!--/ Internal. -->
+
+        <!-- External 1. -->
+        <div class="content has-text-justified">
+          <b>External [1/2].</b> Evaluation on RAD-ChestCT is limited to the 16 
+          abnormalities shared with CT-RATE, grouping <i>artery wall calcification</i> and
+          <i>coronary artery wall calcification</i> under the <i>calcification</i> label.
+          Also, <i>mosaic attenuation pattern</i> is not available.
+          CT-SSG demonstrates strong cross-dataset generalization,
+          yielding the best performances across all metrics.
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/classification_radchestct.png" alt="Classification - Quantitative results - RAD-ChestCT" width="50%">
+        </div>
+        <!--/ External 1. -->
+
+        <!-- External 2. -->
+        <div class="content has-text-justified">
+          <b>External [2/2].</b> Evaluation on CT-HCL is limited to the 9 
+          meta-classes, derived from radiology reports, shared with CT-RATE.
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/classification_cthcl.png" alt="Classification - Quantitative results - CT-HCL" width="50%">
+        </div>
+        <!--/ External 2. -->
+
+        <!-- Qualitative. -->
+        <div class="content has-text-justified">
+          <b>Qualitative analysis.</b> We display gradient-weighted class activation maps (GradCAM) on CT-RATE test samples,
+          extracted from the 2D ResNet module, illustrating CT-SSG's ability to predict abnormalities
+          from relevent regions.
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative_gradcam.png" alt="Classification - Qualitative results" width="90%">
+        </div>
+        <!--/ Qualitative. -->
+
+        <!--/ Classification. -->
+
+        <!-- Ablation study. -->
+        <h4 class="title is-4">Ablation study</h4>
+        <!-- Incremental ablation. -->
+        <div class="content has-text-justified">
+          <p>
+            <b>Incremental ablation.</b> Starting from the initialization of the node features to
+            the full CT-SSG architecture, we quantify the impact of each component. The cumulative trend suggests
+            that the model benefits from the synergistic effect of multiple choices.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/incremental_ablation.png" alt="Incremental ablation - Quantitative results" width="55%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Graph convolutional operators.</b> We also evaluate abnormality classification performance across different graph operators,
+            replacing the spectral-based Chebyshev operator with spatial ones, including <i>graph convolution</i> and <i>graph attention</i> operators,
+            also varying the graph topology. These empirical results highlight the advantage of spectral formulations over spatial ones to capture
+            dependencies across axial slices.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/graph_convolution_comparison.png" alt="Graph convolution - Quantitative results" width="55%">
+        </div>
+
+        <!--/ Ablation study. -->
+
+        <!-- Report Generation. -->
+        <h4 class="title is-4">Transfer to report generation</h4>
+        <!-- Quantitative. -->
+        <div class="content has-text-justified">
+          <p>
+            <b>Quantitative analysis.</b> CT-SSG is further evaluated on the automated report generation task.
+            To isolate the effect of latent representation quality, we adopt a deliberately
+            simple encoder-decoder architecture inspired by <a href="http://arxiv.org/abs/2510.20639">CT2Rep</a>.
+            The visual encoder is pretrained and kept frozen, while the decoder is trained on the next-token prediction task.
+            We select a representative set of baselines, including the transformer-based ViViT and the fully convolutional ResNet3D.
+            We report Natural Language Generation (BLEU-1, METEOR) and Clinical Efficacy (macro <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.210258">RadBERT</a> F1-Score, 
+            <a href="http://arxiv.org/abs/2505.17167">CRG</a>) metrics on the held-out CT-RATE test set. CT-SSG achieves substancial improvements over baseline visual encoders. 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/report_generation_table.png" alt="Report generation - Quantitative results" width="50%">
+        </div>
+        <!-- / Quantitative. -->
+
+        <!-- Qualitative. -->
+        <div class="content has-text-justified">
+          <p>
+            <b>Qualitative analysis.</b> Below, the figure shows examples of generated reports using CT-SSG as visual encoder.
+            Color-coded terms indicate detected abnormalities, illustrating CT-SSG's ability to generate reports with relevant terminology.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative_report_generation.png" alt="Report generation - Qualitative results" width="95%">
+        </div>
+        <!-- / Qualitative. -->
+
+        <!--/ Report Generation. -->
+
+        <!-- Abdominal. -->
+        <h4 class="title is-4">Transfer to Abdominal CT</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            We further investigate the cross-domain generalization of our learned representations
+            by extending evaluation to 3D abdominal CT scans, leveraging the 
+            <a href="https://stanfordaimi.azurewebsites.net/datasets/60b9c7ff-877b-48ce-96c3-0194c8205c40">Merlin Abdominal CT</a> dataset.
+            As only radiology reports are available, pseudo labels are extracted using <a href="http://arxiv.org/abs/2407.21783">LLaMA 3.1</a>.
+            We perform a linear evaluation on the abnormality classification task, varying the training set size from 100 to 10,000 samples.
+            CT-SSG, trained on CT-RATE chest CT volumes, is kept frozen while a linear layer is trained on the classification task with Binary Cross-Entropy supervision.
+            Compared to an end-to-end supervised baseline with no chest CT pretraining, the linear probing configuration demonstrates improved performances for low-data regime scenarios.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/abdominal_results.png" alt="Quantitative results" width="55%">
+        </div>
+        <!--/ Abdominal. -->
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work of academic research, our experiments are run on public CT datasets. 
+            We acknowledge contributors from <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">CT-RATE</a> <b>[1]</b>, 
+            <a href="https://zenodo.org/records/6406114">RAD-ChestCT</a> <b>[2]</b>,
+            and <a href="https://stanfordaimi.azurewebsites.net/datasets/60b9c7ff-877b-48ce-96c3-0194c8205c40">Merlin Abdominal CT</a> <b>[3]</b>.
+            for releasing the datasets to the research community.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[1]</b> Generalist foundation models from a multimodal dataset for 3D CT.
+            <a href="https://www.nature.com/articles/s41551-025-01599-y">Hamamci et al. 2026</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[2]</b> Machine-learning-based multiple abnormality prediction with large-scale chest CT volumes.
+            <a href="https://www.sciencedirect.com/science/article/pii/S1361841520302218">Draelos et al. 2021</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[3]</b> Merlin: a computed tomography vision–language foundation model and dataset.
+            <a href="https://www.nature.com/articles/s41586-026-10181-8">Blankemeier et al. 2026</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{dipiazza_2026_ctssg,
+  author    = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier. and Boussel, Loic},
+  title     = {Structured Spectral Graph Representation Learning for Multi-label Abnormality Analysis from 3D CT Scans},
+  journal   = {Under review},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
