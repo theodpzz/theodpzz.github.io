@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Imitating Radiological Scrolling: A Global-Local Attention Model for 3D Chest CT Volumes Multi-Label Anomaly Classification.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CT-Scroll - Project Page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Imitating Radiological Scrolling: A Global-Local Attention Model for 3D Chest CT Volumes Multi-Label Anomaly Classification</h1>
+          <h1 class="title is-4 publication-title">MIDL 2025 - Oral</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Theo Di Piazza</a><sup>1,2</sup></span>
+            <span class="author-block">
+              Carole Lazarus</a><sup>3</sup></span>
+            <span class="author-block">
+              Olivier Nempont</a><sup>3</sup></span>
+            <span class="author-block">
+              Loic Boussel</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSA Lyon,</span>
+            <span class="author-block"><sup>2</sup>Hospices Civil de Lyon</span>
+            <span class="author-block"><sup>3</sup>Philips Clinical Informatics</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2503.20652"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/theodpzz/ct-scroll"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            The rapid increase in the number of Computed Tomography (CT) scan examinations has created an urgent need for
+             automated tools, such as organ segmentation, anomaly classification, and report generation, to assist radiologists 
+             with their growing workload.  Multi-label classification of Three-Dimensional (3D) CT scans is a challenging task 
+             due to the volumetric nature of the data and the variety of anomalies to be detected. Existing deep learning methods
+              based on Convolutional Neural Networks (CNNs) struggle to capture long-range dependencies effectively, while 
+              Vision Transformers require extensive pre-training, posing challenges for practical use. Additionally, these 
+              existing methods do not explicitly model the radiologist's navigational behavior while scrolling through CT scan 
+              slices, which requires both global context understanding and local detail awareness. In this study, we present 
+              CT-Scroll, a novel global-local attention model specifically designed to emulate the scrolling behavior of radiologists 
+              during the analysis of 3D CT scans. Our approach is evaluated on two public datasets, demonstrating its efficacy through 
+              comprehensive experiments and an ablation study that highlights the contribution of each model component.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-unified">
+          <p>
+            The CT-Scroll architecture consists of three main components. (1) Axial slices
+            of the volume are grouped into triplets and processed by a ResNet followed by a
+            GAP layer, producing a vector representation per triplet. (2) The Scrolling Block
+            then refines these embedded visual tokens using both global and local attention
+            mechanisms. (3) Finally, the aggregated features are fed into a classification head
+            to predict abnormalities.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/method_overview.png" alt="Main figure" width="95%">
+          <img src="./static/images/mask_swa.png" alt="Main figure" width="65%">
+        </div>
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained and evaluated on CT-RATE across 5 independant runs, using train/validation/test patient-level splits (85/15).
+            CT-RATE trained models are evaluated on the external RAD-ChestCT, focusing on the 16 abnormalities shared across datasets.
+          </p>
+        </div>
+        <!-- Classification. -->
+        <h4 class="title is-4">Quantitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            CT-Scroll is compared against attention-based visual encoders with ViViT and Swin3D.
+            We also include convolutional backbones, including the 2.5D CT-Net and a volumetric convolutional neural network (CNN).
+            All visual encoders are initialized using ImageNet pre-trained weights:
+            we use a 2D ViT-S for ViViT, a 2D Swin-S for Swin3D and a 2D ResNet18 for CT-Net, 3D CNN and CT-Scroll
+            We report AUROC, Accuracy and F1-Score on the multi-label abnormality classification task.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/quantitate_classification.png" alt="Quantitative results" width="65%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            In domain, CT-Scroll achieves the best results across all merics, demonstrating an improvement
+            +5.02% in F1-Score over CT-Net. CT-Scroll demonstrates strong generalization under distribution shift,
+            achieving the best AUROC and Accuracy on the external RAD-ChestCT.
+          </p>
+        </div>
+        <!--/ Classification. -->
+
+        <!-- Ablation study. -->
+        <h4 class="title is-4">Ablation study</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the effectiveness of the proposed Scrolling Block, we compare its performance against various aggregation modules and masking strategies.
+            For the aggregation modules, feature maps extracted from the 2D triplet-wise module are concatenated and given to i) a 3D convolutional neural network,
+            ii) a linear projection and iii) a global average pooling operation over all dimensions.
+            For the masking strategy, the causal-cranial and the cranial-caudal sliding windows attention are replaced by i) a causal attention mask, ii) a global attention mask,
+            and iii) alternating global-local attention masks. 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/ablation_study.png" alt="Qualitative results" width="65%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            The Scrolling Block consistently outperforms alternative aggregation modules. 
+            These results suggest that jointly modeling short- and long-range dependencies across 
+            triplets of axial slices through an attention-based mechanism improves the representation 
+            of both global context and fine-grained anatomical details, ultimately leading to superior classification performance.
+          </p>
+        </div>
+        <!--/ Multi-Task Ablation. -->
+
+        <!-- Qualitative. -->
+        <h4 class="title is-4">Qualitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            We further visualize CT axial slices using Grad-CAM activation maps extracted from the final layer of the 2D ResNet module within CT-Scroll.
+            These results highlight CT-Scroll's ability to identify abnormalities from relevant regions.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative_results.png" alt="Qualitative results" width="85%">
+        </div>
+        <!--/ Qualitative. -->
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work of academic research, our experiments are run on public Computed Tomography datasets. 
+            We acknowledge contributors from <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">CT-RATE</a> <b>[1]</b>
+            and <a href="https://zenodo.org/records/6406114">RAD-ChestCT</a> <b>[2]</b> 
+            for releasing the datasets to the research community.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[1]</b> Generalist foundation models from a multimodal dataset for 3D CT.
+            <a href="https://www.nature.com/articles/s41551-025-01599-y">Hamamci et al. 2026</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[2]</b> Machine-learning-based multiple abnormality prediction with large-scale chest CT volumes.
+            <a href="https://www.sciencedirect.com/science/article/pii/S1361841520302218">Draelos et al. 2021</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+  </div>
+</section>
+
+<!-- Bibtex. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{dipiazza_2025_ctscroll,
+  author    = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier. and Boussel, Loic},
+  title     = {Imitating Radiological Scrolling: A Global-Local Attention Model for 3D Chest CT Volumes Multi-Label Anomaly Classification},
+  booktitle = {Medical Imaging with Deep Learning (MIDL)},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+<!--/ Bibtex. -->
+
+<!-- More research. -->
+<section class="section" id="more-research">
+
+  <div class="container is-max-desktop content">
+    <h2 class="title">More research</h2>
+
+    <p>
+      Explore additional recent work in medical image analysis related to this project.
+    </p>
+
+    <div class="columns is-centered is-variable is-3">
+
+      <!-- Method 1 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/ctagrg/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/ct_agrg.jpg"
+                 alt="Method 1"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>CT-AGRG</b><br>
+            <span class="is-size-6">ISBI 2025</span><br>
+            <span class="is-size-6  has-text-grey">Report generation</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Method 2 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/ctssg/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/ct_ssg.png"
+                 alt="Method 1"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>CT-SSG</b><br>
+            <span class="is-size-6">MELBA Journal 2026</span><br>
+            <span class="is-size-6  has-text-grey">Graph representation learning</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Method 3 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/unict/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/uni_ct.png"
+                 alt="Method 1"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>UniCT</b><br>
+            <span class="is-size-6">MICCAI 2026</span><br>
+            <span class="is-size-6  has-text-grey">Multi-task learning</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!--/ More research. -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
