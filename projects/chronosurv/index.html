@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ChronoSurv: A Clinical Pathway-Guided Graph Framework for Multimodal Survival Analysis.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChronoSurv - Project Page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">ChronoSurv: A Clinical Pathway-Guided Graph Framework for Multimodal Survival Analysis</h1>
+          <h1 class="title is-4 publication-title">MICCAI 2026</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Hugo Miccinilli</a><sup>1,*</sup></span>
+            <span class="author-block">
+              Theo Di Piazza</a><sup>2,*</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Université Paris-Saclay,</span>
+            <span class="author-block"><sup>2</sup>University of Lyon,</span>
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://theodpzz.github.io/projects/unict/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Proceedings</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2606.19140"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/MICS-Lab/ChronoSurv"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            Accurate survival prediction is essential for personalized treatment planning in head and neck cancer, 
+            yet remains challenging due to the heterogeneous and high-dimensional nature of multimodal clinical data. 
+            While deep survival models have improved predictive performance over classical statistical approaches, 
+            existing methods typically rely on static fusion strategies or temporally agnostic modeling, limiting their ability to capture structured clinical workflows.
+            In this work, we propose ChronoSurv, a heterogeneous hierarchical directed graph framework for multimodal survival analysis. ChronoSurv represents patient 
+            care as a progression-aware clinical trajectory using directed graphs aligned with key diagnostic steps. A hierarchical topology incorporates fine-grained, 
+            coarse, and global representations, further supporting flexible adaptation to missing modalities, while heterogeneous message passing models complex and asymmetric 
+            relationships across modalities and clinical steps. Experimental results on two public datasets demonstrate that ChronoSurv achieves state-of-the-art discriminative 
+            performance while maintaining statistically reliable calibration. Comprehensive ablation studies further confirm the contribution of each architectural component, 
+            highlighting the potential of trajectory-aware graph modeling for multimodal survival prediction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-unified">
+          <p>
+            We propose ChronoSurv, a multimodal framework for survival analysis in head and neck cancer 
+            that mirrors the clinical care pathway. Our approach extracts per-modality features,
+             models each patient as a hierarchical directed graph, enables feature interaction 
+             through heterogeneous message passing, and predicts discrete-time hazards.
+          </p>
+        <div class="content has-text-centered">
+          <img src="./static/images/method_overview.jpg" alt="Dataset" width="80%">
+        </div>
+        </div>
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained and evaluation on UniHNC, a combination of the HANCOCK and TCGA-HNSC datasets.
+            Experiments are run using train/validation/test splits with 5-fold cross-validation.
+            For all methods, we use a pre-trained frozen 
+             <a href="https://www.nature.com/articles/s41591-024-02857-3">UNI</a> as visual encoder
+            and  <a href="https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT">BioClinicalBERT</a> as language model.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/dataset_overview.png" alt="Dataset" width="70%">
+        </div>
+        <!-- Classification. -->
+        <h4 class="title is-4">Quantitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            Discrimination performance is evaluated using C-index,
+            while the IBS assesses overall survival probability accuracy.
+            We also report per-dataset performance (HANCOCK & TCGA-HNSC).
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/quantitative_results.png" alt="Quantitative results" width="70%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            ChronoSurv achieves the highest C-index across datasets while obtaining the best
+            or tied-best IBS across all settings. Among multimodal baselines, SurvPCG reaches the closest Cindex on UniHNC but with a 
+            higher IBS, suggesting that although cross-modal attention captures relevant interactions for risk ranking, it yields less accurate survival probability estimates. 
+            On TCGA-HNSC, where text and blood modalities are unavailable, ChronoSurv matches the best IBS while maintaining competitive discrimination performance, 
+            including against MMD, which is designed to handle incomplete multimodal data. 
+          </p>
+        </div>
+        <!--/ Classification. -->
+
+        <!-- Multi-Task Ablation. -->
+        <h4 class="title is-4">Ablation study</h4>
+        <!-- Ablation 1. -->
+        <div class="content has-text-justified">
+          <p>
+            We compare our multimodal fusion module with unimodal baselines (in pink) and variants replacing the fusion module by 
+            widely used aggregation mechanisms (in green), while keeping identical feature initialization and survival heads.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/ablation_aggregation.png" alt="Ablation 1 results" width="75%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            Unimodal baselines confirm that each modality carries prognostic signal. In fact, tabular features alone match or surpass several 
+            multimodal strategies, highlighting that naïve fusion can be detrimental. In contrast, ChronoSurv consistently outperforms all alternative aggregation schemes, 
+            supporting the effectiveness of structured multimodal interaction modeling.
+          </p>
+        </div>
+
+        <!-- Ablation 2. -->
+        <div class="content has-text-justified">
+          <p>
+            We further report a leave-one-out ablation study on ChronoSurv's components.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/ablation_aggregation.png" alt="Ablation 1 results" width="75%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            Removing any individual clinical step and its corresponding leaf nodes (1-3) degrades performance across all datasets, highlighting
+            that each clinical stage provides complementary prognostic information. Notably,
+            excluding step 2 (initial cancer diagnosis) yields the largest reduction in C-index.
+            Removing hierarchical levels (4 & 5) results in a performance decline, indicating
+            that incorporating coarser information captured by intermediate clinical steps
+            and global patient representations is critical for effective multimodal integration.
+            Disabling heterogeneous message passing (6) consistently degrades C-index and
+            IBS across datasets, demonstrating the importance of relation-specific modeling for structured, multi-level message passing. Finally, replacing directed edges
+            with undirected ones (7) also degrades performance, suggesting that preserving
+            the temporally ordered topology leads to more accurate survival prediction.
+          </p>
+        </div>
+
+        <!--/ Multi-Task Ablation. -->
+
+        <!-- Qualitative. -->
+        <h4 class="title is-4">Qualitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            The figure below provides interpretability insights into ChronoSurv's learned representations. 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative_results.jpg" alt="Qualitative results" width="85%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key observations:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            The contribution matrix (a) indicates how information flows through the
+            graph hierarchy, extracted from normalized contribution between two nodes.
+            These results indicate that step 1 (background) acts as a self-contained source,
+            step 2 (initial diagnosis) predominantly aggregates background patient information from step 1, while step 3 (local surgery) draws from all preceding steps,
+            further highlighting the complementary nature of clinical steps. At the patient
+            level, step 1 and step 3 contribute most to the global representation, reflecting
+            the clinical importance of both patient history and surgical findings for prognosis. Kaplan–Meier analysis (b) demonstrates clear risk stratification, showing a
+            statistically significant difference between groups. The panel (c) illustrates an example of prediction from ChronoSurv, with a representative subset
+            of multimodal inputs from a HANCOCK sample.
+          </p>
+        </div>
+        <!--/ Qualitative. -->
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work of academic research, our experiments are run on public datasets. 
+            We acknowledge contributors from <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">HANCOCK</a> <b>[1]</b>
+            and <a href="https://zenodo.org/records/6406114">TCGA-HNSC</a> <b>[2]</b> 
+            for releasing the datasets to the research community.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[1]</b> A multimodal dataset for precision oncology in head and neck cancer.
+            <a href="https://www.hancock.research.uni-erlangen.org/">Dorrich et al. 2025</a>.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[2]</b> The Cancer Genome Atlas Program (TCGA) - NCI.
+            <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">Dataset homepage</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+  </div>
+</section>
+
+<!-- BibTex. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{md_2026_chronosurv,
+  author    = {Miccinilli, Hugo and Di Piazza, Theo},
+  title     = {ChronoSurv: A Clinical Pathway-Guided Graph Framework for Multimodal Survival Analysis},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+<!--/ Bibtex. -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
