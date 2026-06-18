@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CT-AGRG: Automated Abnormality-Guided Report Generation from 3D Chest CT Volumes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CT-AGRG - Project Page</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CT-AGRG: Automated Abnormality-Guided Report Generation from 3D Chest CT Volumes</h1>
+          <h1 class="title is-4 publication-title">ISBI 2025 - Oral</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Theo Di Piazza</a><sup>1,2</sup></span>
+            <span class="author-block">
+              Carole Lazarus</a><sup>3</sup></span>
+            <span class="author-block">
+              Olivier Nempont</a><sup>3</sup></span>
+            <span class="author-block">
+              Loic Boussel</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSA Lyon,</span>
+            <span class="author-block"><sup>2</sup>Hospices Civil de Lyon</span>
+            <span class="author-block"><sup>3</sup>Philips Clinical Informatics</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10981073/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Proceedings</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.11965?"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/theodpzz/ct-agrg"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            The rapid increase of Computed Tomography examinations have created a need for robust automated
+             analysis techniques in clinical settings to assist radiologists managing their growing workload. 
+             Existing methods generate entire reports directly from 3D CT images, without explicitly focusing 
+             on observed abnormalities. This unguided approach can result in repetitive content or incomplete reports. 
+             We propose a new anomaly-guided report generation model, which first predicts abnormalities and then generates
+              targeted descriptions for each. Evaluation on a public dataset demonstrates significant improvements in report
+              quality and clinical relevance. We extend our work by conducting an ablation study to demonstrate its effectiveness.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-unified">
+          <p>
+            We employ a two-stage approach for anomaly detection and description generation. 
+            Initially, we use a visual feature extractor pre-trained on a multi-label classification task. 
+            In the first stage, we perform multi-task learning with one classification head per anomaly.
+             If an anomaly is detected, its associated vector representation is then passed to the second stage. 
+             Here, a pre-trained GPT-2 model generates a descriptive text of the identified anomaly.
+          </p>
+          <img src="./static/images/method_overview.jpg" alt="Main figure" width="95%">
+        </div>
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Models are trained and evaluated on CT-RATE, using train/validation/test splits across five independent runs.
+          </p>
+        </div>
+        <!-- Classification. -->
+        <h4 class="title is-4">Quantitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            CT-AGRG is compared against CT2Rep, the first-of-its-kind report generation framework for 3D CT scans.
+            CT2Rep introduces an encoder-decoder architecture that generates the entire report without an intermediate abnormality classification tasks.
+            For CT-AGRG, we report performances using an attention-based backbone (CT-ViT), as well as a 2.5D convolutional neural networks (CT-Net).
+            We report natural language generation metrics (METEOR, ROUGE, BERT, BART, BLEU), and Clinical Efficacy metrics (F1-Score, Precision, Recall) 
+            extracted with the Rad-BERT labeler.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/quantitative_metrics.png" alt="Qualitative results" width="90%">
+        </div>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 0.5em;">Key findings:</p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            CT-AGRG outperforms CT2Rep on both report generation and clinical efficacy metrics. 
+            With CT-Net as the visual backbone, CT-AGRG improves Recall by 64% and F1-score by 50%, 
+            demonstrating that an intermediate abnormality classification stage significantly enhances 
+            pathology detection while producing semantically more accurate reports.
+          </p>
+        </div>
+        <!--/ Classification. -->
+
+        <!-- Qualitative. -->
+        <h4 class="title is-4">Qualitative results</h4>
+        <!-- Re-rendering. -->
+        <div class="content has-text-justified">
+          <p>
+            The qualitative example below compares CT-AGRG with the CT2Rep baseline and the ground-truth radiology report. 
+            Color-coded annotations highlight clinically relevant findings, showing that CT-AGRG more accurately identifies 
+            pathologies and generates reports using terminology that closely matches radiologist-written reports.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/generation_example_page.jpg" alt="Qualitative results" width="65%">
+        </div>
+        <!--/ Qualitative. -->
+
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Experiments. -->
+
+
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work of academic research, our experiments are run on a public Computed Tomography dataset. 
+            We acknowledge contributors from <a href="https://huggingface.co/datasets/ibrahimhamamci/CT-RATE">CT-RATE</a> <b>[1]</b>
+            for releasing the dataset to the research community.
+          </p>
+          <p style="margin-top: 0; padding-left: 2em; text-indent: 0em;">
+            <b>[1]</b> Generalist foundation models from a multimodal dataset for 3D CT.
+            <a href="https://www.nature.com/articles/s41551-025-01599-y">Hamamci et al. 2026</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{dipiazza_2026_unict,
+  author    = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier. and Boussel, Loic},
+  title     = {CT-AGRG: Automated Abnormality-Guided Report Generation from 3D Chest CT Volumes},
+  booktitle = {IEEE 22nd International Symposium on Biomedical Imaging (ISBI)},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+<!-- More research. -->
+<section class="section" id="more-research">
+
+  <div class="container is-max-desktop content">
+    <h2 class="title">More research</h2>
+
+    <p>
+      Explore additional recent work in medical image analysis related to this project.
+      Click on the images to access the corresponding project pages.
+    </p>
+
+    <div class="columns is-centered is-variable is-3">
+
+      <!-- Method 1 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/ctscroll/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/ct_scroll.png"
+                 alt="Method 1"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>CT-Scroll</b><br>
+            <span class="is-size-6">MIDL 2025</span><br>
+            <span class="is-size-6  has-text-grey">2.5D Representation learning</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Method 2 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/ctssg/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/ct_ssg.png"
+                 alt="Method 2"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>CT-SSG</b><br>
+            <span class="is-size-6">MELBA Journal 2026</span><br>
+            <span class="is-size-6  has-text-grey">Graph representation learning</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Method 3 -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <a href="https://theodpzz.github.io/projects/unict/" target="_blank" rel="noopener noreferrer">
+            <div style="height: 140px; display:flex; align-items:flex-end; justify-content:center;">
+            <img src="./static/images/uni_ct.png"
+                 alt="Method 3"
+                 style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+            </div>
+          </a>
+          <p>
+            <b>UniCT</b><br>
+            <span class="is-size-6">MICCAI 2026</span><br>
+            <span class="is-size-6  has-text-grey">Multi-task learning</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!--/ More research. -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
