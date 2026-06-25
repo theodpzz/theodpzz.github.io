@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [UniCT website](https://theodpzz.github.io/projects/unict/).
 
-If you find Nerfies useful for your work please cite:
+If you find UniCT useful for your work please cite:
 ```
 @article{dipiazza_2026_unict,
   author    = {Di Piazza, Theo and Lazarus, Carole and Nempont, Olivier and Boussel, Loic},
