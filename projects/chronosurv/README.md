@@ -4,7 +4,7 @@ This is the repository that contains source code for the [ChronoSurv website](ht
 
 If you find ChronoSurv useful for your work, we would appreciate the following citation:
 ```
-@article{dipiazza_2026_unict,
+@article{md_2026_chronosurv,
   author    = {Miccinilli, Hugo and Di Piazza, Theo},
   title     = {ChronoSurv: A Clinical Pathway-Guided Graph Framework for Multimodal Survival Analysis},
   booktitle = {International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
