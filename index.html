@@ -45,19 +45,6 @@
         --divider:          #dee2e6;
       }
 
-      body.dark-mode {
-        --sidebar-bg-start: #1a2332;
-        --sidebar-bg-end:   #1e2a3a;
-        --sidebar-border:   #2e4060;
-        --sidebar-text:     #c8d8e8;
-        --accent:           #6aabdc;
-        --accent-light:     #88c0f0;
-        --tag-bg:           #1e3350;
-        --body-bg:          #131d2b;
-        --text-main:        #dce6f0;
-        --divider:          #2e4060;
-      }
-
       /* ── Base ─────────────────────────────────────────────────── */
       html, body {
         margin: 0;
@@ -225,21 +212,6 @@
         font-weight: 500;
       }
 
-      /* Dark mode toggle inside sidebar */
-      .dark-mode-toggle {
-        margin-bottom: 20px;
-        align-self: flex-end;
-      }
-
-      .dark-mode-toggle button {
-        background: var(--body-bg);
-        border: 1px solid var(--sidebar-border);
-        border-radius: 999px;
-        padding: 6px 12px;
-        cursor: pointer;
-        transition: background .3s;
-      }
-
       /* ── Main content ─────────────────────────────────────────── */
       .main-content {
         flex: 1;
@@ -293,7 +265,6 @@
       .pub-title { font-weight: 700; font-size: .95rem; line-height: 1.4; }
 
       .pub-authors { margin: 3px 0 7px 0; color: #555; font-size: .83rem; }
-      body.dark-mode .pub-authors { color: #9ab; }
 
       .pub-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
 
@@ -311,12 +282,6 @@
         background-color: #FDECEA;
         color: #a93226;
         border-color: #e05c5c;
-      }
-
-      body.dark-mode .tag.oral {
-        background-color: #3a1a1a;
-        color: #e87070;
-        border-color: #b04040;
       }
 
       /* ── Community section ────────────────────────────────────── */
@@ -352,8 +317,6 @@
         font-size: .83rem;
       }
 
-      body.dark-mode .community-role { color: #8a9db5; }
-
       /* ── Responsive ───────────────────────────────────────────── */
       @media (max-width: 768px) {
         .page-wrapper { flex-direction: column; }
@@ -384,27 +347,7 @@
 
       <!-- ══════════════════ SIDEBAR ══════════════════ -->
       <aside class="sidebar">
-
-        <!-- Dark mode toggle -->
-        <div class="dark-mode-toggle">
-          <button onclick="toggleDarkMode()" type="button" aria-label="Toggle dark mode">
-            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 dark:hidden" style="width:18px;height:18px;">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="hidden dark:block" style="width:18px;height:18px;display:none;">
-              <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47Z"></path>
-            </svg>
-          </button>
-        </div>
-
+        
         <!-- Avatar -->
         <img src="files/profil.png" alt="Theo Di Piazza" class="sidebar-avatar">
 
